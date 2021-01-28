@@ -23,7 +23,7 @@ def main(ctx):
   linux_cxx("TOOLSET=gcc COMPILER=g++-8 CXXSTD=03,11,14,17 Job 6", "g++-8", packages="g++-8", buildtype="boost", buildscript="drone", image=linuxglobalimage, environment={'TOOLSET': 'gcc', 'COMPILER': 'g++-8', 'CXXSTD': '03,11,14,17', 'DRONE_JOB_UUID': 'c1dfd96eea'}, globalenv=globalenv),
   linux_cxx("TOOLSET=clang COMPILER=clang++ CXXSTD=03,11,1 Job 7", "clang++", packages="libstdc++-5-dev", buildtype="boost", buildscript="drone", image=linuxglobalimage, environment={'TOOLSET': 'clang', 'COMPILER': 'clang++', 'CXXSTD': '03,11,14,1z', 'DRONE_JOB_UUID': '902ba3cda1'}, globalenv=globalenv),
   linux_cxx("TOOLSET=clang COMPILER=clang++-libc++ CXXSTD= Job 8", "clang++-libc++", packages="libc++-dev", buildtype="boost", buildscript="drone", image=linuxglobalimage, environment={'TOOLSET': 'clang', 'COMPILER': 'clang++-libc++', 'CXXSTD': '03,11,14,1z', 'DRONE_JOB_UUID': 'fe5dbbcea5'}, globalenv=globalenv),
-  osx_cxx("TOOLSET=clang COMPILER=clang++ CXXSTD=03,11,1 Job 9", "clang++", packages="", buildtype="boost", buildscript="drone", environment={'TOOLSET': 'clang', 'COMPILER': 'clang++', 'CXXSTD': '03,11,14,1z', 'DRONE_JOB_UUID': '0ade7c2cf9'}, globalenv=globalenv),
+  osx_cxx("TOOLSET=clang COMPILER=clang++ CXXSTD=03,11,1 Job 9", "clang++", packages="", buildtype="boost", buildscript="drone", environment={'TOOLSET': 'clang', 'COMPILER': 'clang++', 'CXXSTD': '03,11,14,1z', 'DRONE_JOB_UUID': '0ade7c2cf9'}, globalenv=globalenv, xcode_version="9.4"),
     ]
 
 # from https://github.com/boostorg/boost-ci
